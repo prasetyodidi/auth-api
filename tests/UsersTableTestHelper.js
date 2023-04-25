@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import pool from "../src/Infrastructures/database/postgres/pool";
+const pool = require("../src/Infrastructures/database/postgres/pool");
 
 const UsersTableTestHelper = {
   async addUser({
@@ -13,9 +13,9 @@ const UsersTableTestHelper = {
     await pool.query(query)
   },
 
-  async findUserById(id) {
+  async findUsersById(id) {
       const query = {
-          text: 'SELECT * FROM users WHERE id = $id',
+          text: 'SELECT * FROM users WHERE id = $1',
           values: [id]
       };
 
