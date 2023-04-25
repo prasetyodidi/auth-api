@@ -1,10 +1,11 @@
-const NotFoundError = require("../NotFoundError");
-describe('NotFoundError', function () {
-    it('should create NotFoundError correctly', function () {
-        const notFoundError = new NotFoundError('not found!');
+const NotFoundError = require('../NotFoundError');
 
-        expect(notFoundError.message).toEqual('not found!');
-        expect(notFoundError.statusCode).toEqual(404);
-        expect(notFoundError.name).toEqual('NotFoundError');
-    });
+describe('NotFoundError', () => {
+  it('should create NotFoundError correctly', () => {
+    const notFoundError = new NotFoundError('not found!');
+
+    expect(notFoundError.message).toEqual('not found!');
+    expect(notFoundError.statusCode).toEqual(404);
+    expect(notFoundError.name).toEqual('NotFoundError');
+  });
 });

@@ -1,10 +1,11 @@
-const AuthenticationError = require("../AuthenticationError");
-describe('AuthenticationError', function () {
-    it('should create AuthenticationError correctly', function () {
-        const authenticationError = new AuthenticationError('authentication error!');
+const AuthenticationError = require('../AuthenticationError');
 
-        expect(authenticationError.statusCode).toEqual(401);
-        expect(authenticationError.message).toEqual('authentication error!');
-        expect(authenticationError.name).toEqual('AuthenticationError');
-    });
+describe('AuthenticationError', () => {
+  it('should create AuthenticationError correctly', () => {
+    const authenticationError = new AuthenticationError('authentication error!');
+
+    expect(authenticationError.statusCode).toEqual(401);
+    expect(authenticationError.message).toEqual('authentication error!');
+    expect(authenticationError.name).toEqual('AuthenticationError');
+  });
 });

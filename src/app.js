@@ -1,9 +1,11 @@
-const createServer = require("./Infrastructures/http/createServer");
-const container = require("./Infrastructures/container");
+const createServer = require('./Infrastructures/http/createServer');
+const container = require('./Infrastructures/container');
+
 const start = async () => {
-    const server = await createServer(container);
-    await server.start();
-    console.log(`server start at ${server.info.uri}`);
-}
+  const server = await createServer(container);
+  await server.start();
+  /* eslint-disable no-console */
+  console.log(`server start at ${server.info.uri}`);
+};
 
 start();
